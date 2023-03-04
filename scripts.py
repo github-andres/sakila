@@ -1,5 +1,5 @@
 import pandas as pd
-import mysql.connectot
+import mysql.connector
 
 database = mysql.connector.connect(
     host="localhost",
