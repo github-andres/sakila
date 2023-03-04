@@ -1,5 +1,15 @@
-import pandas as pd
-import mysql.connector
+
+
+
+
+
+
+
+
+
+
+
+
 
 database = mysql.connector.connect(
     host="localhost",
@@ -8,8 +18,6 @@ database = mysql.connector.connect(
     database="sakila"
 )
 
-actors = pd.read_sql("SELECT * FROM actor", database)
-
+db_tables = pd.read_sql("SHOW TABLES", database)
 database.close()
-
-print(actors)
+print(db_tables)
