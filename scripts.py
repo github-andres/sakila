@@ -8,12 +8,6 @@ database = mysql.connector.connect(
     database="sakila"
 )
 
-
-
-
-
-
 db_tables = pd.read_sql("SHOW TABLES", database)
-
 database.close()
 print(db_tables)
