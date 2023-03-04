@@ -9,6 +9,9 @@ database = mysql.connector.connect(
 )
 
 db_tables = pd.read_sql("SHOW TABLES", database)
+actors = pd.read_sql("SELECT * FROM actor", database)
 
 database.close()
+
 print(db_tables)
+print(actors)
