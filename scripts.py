@@ -10,5 +10,5 @@ database = mysql.connector.connect(
 
 db_tables = pd.read_sql("SHOW TABLES", database)
 
-
+database.close()
 print(db_tables)
