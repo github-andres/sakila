@@ -8,7 +8,6 @@ database = mysql.connector.connect(
     database="sakila"
 )
 
-db_tables = pd.read_sql("SHOW TABLES", database)
 actors = pd.read_sql("SELECT * FROM actor", database)
 
 database.close()
